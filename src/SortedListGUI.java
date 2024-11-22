@@ -46,7 +46,11 @@ public class SortedListGUI extends JFrame {
         searchBtn.setFocusable(false);
         searchBtn.addActionListener((ActionEvent ae) -> {
             try{
-                list.binarySearch(searchTF.getText().trim(), resultsTA);
+                if(searchTF.getText().isEmpty()){
+                    JOptionPane.showMessageDialog(null, "Please enter valid input", "Error", JOptionPane.WARNING_MESSAGE);
+                }else {
+                    list.binarySearch(searchTF.getText().trim(), resultsTA);
+                }
             }catch(NullPointerException e){
                 JOptionPane.showMessageDialog(null, "You must add elements to our list first!", "Error Occurred", JOptionPane.ERROR_MESSAGE);
 
