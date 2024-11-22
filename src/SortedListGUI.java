@@ -50,6 +50,7 @@ public class SortedListGUI extends JFrame {
             }catch(NullPointerException e){
                 JOptionPane.showMessageDialog(null, "You must add elements to our list first!", "Error Occurred", JOptionPane.ERROR_MESSAGE);
 
+
             }
         });
 
@@ -89,10 +90,5 @@ public class SortedListGUI extends JFrame {
 
 
     }
-
-    private void searchList(String item) {
-    }
-
-
 
 }
